@@ -3,5 +3,5 @@ project(Calc)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp utils.cpp utils.h)
+set(SOURCE_FILES main.cpp utils.cpp utils.h operations.cpp operations.h)
 add_executable(Calc ${SOURCE_FILES})
