@@ -21,8 +21,8 @@ void ui_index();
 
 
 void ui_module_sum() {
-    int total_values = 0;
     write_title("SUMA", true);
+    int total_values = 0;
     cout << "Introdúzca la cantidad de números a sumar: ";
     cin >> total_values;
 
@@ -36,19 +36,43 @@ void ui_module_sum() {
     float total = add(nums);
 
     cout << "La suma de los valores es: " << total << endl;
+}
 
+void ui_module_subtract() {
+    write_title("RESTA", true);
+
+    float a;
+    float b;
+
+    cout << "Introdúzca el primer número: ";
+    cin >> a;
+    cout << endl << "Introdúzca el valor que desea restar al primer número: ";
+    cin >> b;
+
+    cout << "El resultado de la operación " << a << " — " << b <<" es: " << subtract(a, b);
 }
 
 void ui_index() {
     char opt;
     write_title("CALCULADORA");
-    cout << "Seleccione una opción a continuación.\n1) Suma\n2) Resta" << endl << endl << "> ";;
+    cout
+            << "Seleccione una opción a continuación.\n1) Suma\n2) Resta\n3) Multiplicación\n4) División\n5) Factorial\n6) Potencia"
+            << "\ns) Salir"
+            << endl << endl << "> ";
     cin >> opt;
 
     if (opt == '1')
         ui_module_sum();
-    else {
+    else if (opt == '2')
+        ui_module_subtract();
 
+    else if (opt == 's') {
+        cout << "\nEl programa ha finalizado." << endl;
+        return;
+    } else {
+        clear_ui();
+        cout << "\nHa ingresado una opción incorrecta. Inténtelo de nuevo.\n\n";
+        ui_index();
     }
 }
 
