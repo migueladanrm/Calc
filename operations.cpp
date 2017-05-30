@@ -64,7 +64,7 @@ float subtract(float a, float b) {
 int factorial(int n) {
     int factorial = 1;
 
-    while(n < 1) {
+    while(n > 1) {
         int tmp = (int)multiply(factorial, n);
         factorial = tmp;
         n = n - 1;
