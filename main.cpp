@@ -112,14 +112,19 @@ void ui_module_pow() {
 }
 
 void ui_module_binToDec() {
-    write_title("Binario a decimal", true);
+    write_title("BINARIO A DECIMAL", true);
 
+    float a;
     float b;
-
+    char str [100];
     cout << "Introdúzca el número en binario: ";
-    cin >> b;
+    cin.getline(str,100);
+    string *res = split(str);
+    a = atof(res[0]);
+    b = atof(res[1]);
 
-    cout << "El resultado de " << b << "a base decimal es: " << binToDec(b) << endl;
+
+    cout << "El resultado de " << str << "a base decimal es: " << binToDec(a,b) << endl;
 }
 
 void ui_index() {
@@ -147,7 +152,7 @@ void ui_index() {
     else if (opt == '7')
         return;
     else if (opt == '8')
-        return;
+        ui_module_binToDec();
     else if (opt == '9')
         return;
     else if (opt == '10')

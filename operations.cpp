@@ -82,7 +82,7 @@ int pow(int n, int p) {
     return pow;
 }
 
-float binToDec(float n){
+float binToDec(float a,float b){
 
 
 }

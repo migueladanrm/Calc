@@ -47,7 +47,8 @@ int factorial(int n);
 int pow(int n, int p);
 
 /**
- * @param n Número binario a convetir.
+ * @param a Parte entera del número binario a convetir.
+ * @param b Parte decimal del número binario a convetir.
  * @return Número decimal.
  */
-float binToDec(float n);
+float binToDec(float a, float b);

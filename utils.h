@@ -18,3 +18,10 @@ void write_title(std::string title);
  * @param clean Especifica si se limpiará la consola.
  */
 void write_title(std::string title, bool clean);
+
+/**
+ *
+ * @param n string para hacer split
+ * @return Array de string
+ */
+std::string *split(std::string n);
