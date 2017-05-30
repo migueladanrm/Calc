@@ -45,3 +45,9 @@ int factorial(int n);
  * @return Número potenciado.
  */
 int pow(int n, int p);
+
+/**
+ * @param n Número binario a convetir.
+ * @return Número decimal.
+ */
+float binToDec(float n);
