@@ -51,3 +51,10 @@ int pow(int n, int p);
  * @return Número decimal.
  */
 float binToDec(float n);
+
+/**
+ * Conversión de grados Celsius a grades Fahrenheit.
+ * @param celsius Grados Celsius.
+ * @return Grados Fahrenheit.
+ */
+float celsius_to_fahrenheit(float celsius);

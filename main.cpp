@@ -123,7 +123,7 @@ void ui_module_binToDec() {
 }
 
 void ui_index() {
-    char opt;
+    string opt;
     write_title("CALCULADORA", true);
     cout
             << "Seleccione una opción a continuación.\n1) Suma\n2) Resta\n3) Multiplicación\n4) División\n5) Factorial"
@@ -132,27 +132,27 @@ void ui_index() {
             << endl << endl << "> ";
     cin >> opt;
 
-    if (opt == '1')
+    if (opt == "1")
         ui_module_sum();
-    else if (opt == '2')
+    else if (opt == "2")
         ui_module_subtract();
-    else if (opt == '3')
+    else if (opt == "3")
         ui_module_multiply();
-    else if (opt == '4')
+    else if (opt == "4")
         ui_module_divide();
-    else if (opt == '5')
+    else if (opt == "5")
         ui_module_factorial();
-    else if (opt == '6')
+    else if (opt == "6")
         ui_module_pow();
-    else if (opt == '7')
+    else if (opt == "7")
         return;
-    else if (opt == '8')
+    else if (opt == "8")
         return;
-    else if (opt == '9')
+    else if (opt == "9")
         return;
-    else if (opt == '10')
+    else if (opt == "10")
         return;
-    else if (opt == 's') {
+    else if (opt == "s") {
         cout << "\nEl programa ha finalizado." << endl;
         return;
     } else {
