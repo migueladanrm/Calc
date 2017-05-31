@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 
 /**
@@ -19,9 +20,7 @@ void write_title(std::string title);
  */
 void write_title(std::string title, bool clean);
 
-/**
- *
- * @param n string para hacer split
- * @return Array de string
- */
-std::string *split(std::string n);
+template<typename Out>
+void split(const std::string &s, char delim, Out result);
+
+std::vector<std::string> split(const std::string &s, char delim);

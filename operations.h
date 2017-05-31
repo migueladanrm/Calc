@@ -47,8 +47,14 @@ int factorial(int n);
 int pow(int n, int p);
 
 /**
- * @param a Parte entera del número binario a convetir.
- * @param b Parte decimal del número binario a convetir.
+ * @param n Número binario a convetir.
  * @return Número decimal.
  */
-float binToDec(float a, float b);
+float binToDec(float n);
+
+/**
+ * Conversión de grados Celsius a grades Fahrenheit.
+ * @param celsius Grados Celsius.
+ * @return Grados Fahrenheit.
+ */
+float celsius_to_fahrenheit(float celsius);

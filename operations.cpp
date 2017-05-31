@@ -3,6 +3,10 @@
 
 using namespace std;
 
+float add(float a, float b) {
+    return add(new float[2]{a, b});
+}
+
 float add(float *num_array) {
     float total = 0;
 
@@ -85,4 +89,8 @@ int pow(int n, int p) {
 float binToDec(float a,float b){
 
 
+}
+
+float celsius_to_fahrenheit(float celsius) {
+    return add(multiply(celsius, 9 / 5), 32);
 }

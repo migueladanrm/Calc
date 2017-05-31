@@ -1,6 +1,10 @@
 #include "utils.h"
 #include <iostream>
-#include <cstring>
+#include <string>
+#include <sstream>
+#include <vector>
+#include <iterator>
+
 using namespace std;
 
 void clear_ui() {
@@ -20,14 +24,19 @@ void write_title(string title, bool clean) {
     write_title(title);
 }
 
-std::string *split(char str[100]){
-    string result[200] ;
-    char* point;
-    point = strtok(str,".");
-
-    while(point != NULL){
-        result->append(point);
-        point= strtok(NULL,".");
+template<typename Out>
+void split(const string &s, char delim, Out result) {
+    stringstream ss;
+    ss.str(s);
+    string item;
+    while (getline(ss, item, delim)) {
+        *(result++) = item;
     }
-    return result;
+}
+
+
+vector<string> split(const string &s, char delim) {
+    vector<string> elems;
+    split(s, delim, back_inserter(elems));
+    return elems;
 }
