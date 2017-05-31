@@ -94,3 +94,17 @@ float binToDec(float n){
 float celsius_to_fahrenheit(float celsius) {
     return add(multiply(celsius, 9 / 5), 32);
 }
+
+float decimal_binario(float a){
+    int entero;
+    int decimales;
+    string parada =entero+"";
+
+    string ent;
+    string deci;
+    int aux;
+    while(aux<=sizeof(parada)){
+
+
+    }
+}
