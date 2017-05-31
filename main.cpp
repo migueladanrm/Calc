@@ -126,6 +126,16 @@ void ui_module_binToDec() {
     cout << "El resultado de " << b << "a base decimal es: " << binToDec(b) << endl;
 }
 
+
+void ui_module_decimal_binario(){
+    write_title("Dcimal a binario", true);
+    string numero;
+    cout << "Introdúzca el número en decimal: ";
+    cin >> numero;
+    cout<<"El numero "+numero+" en binario es "+decimal_binario(numero);
+
+}
+
 void ui_index() {
     string opt;
     write_title("CALCULADORA", true);
@@ -149,7 +159,7 @@ void ui_index() {
     else if (opt == "6")
         ui_module_pow();
     else if (opt == "7")
-        return;
+        ui_module_decimal_binario();
     else if (opt == "8")
         return;
     else if (opt == "9")
