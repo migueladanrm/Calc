@@ -50,7 +50,7 @@ int pow(int n, int p);
  * @param n Número binario a convetir.
  * @return Número decimal.
  */
-float binToDec(float n);
+std::string binToDec(std::string n);
 
 /**
  * Conversión de grados Celsius a grades Fahrenheit.

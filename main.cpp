@@ -116,14 +116,14 @@ void ui_module_pow() {
 }
 
 void ui_module_binToDec() {
-    write_title("Binario a decimal", true);
+    write_title("BINARIO A DECIMAL", true);
 
-    float b;
+    string b;
 
     cout << "Introdúzca el número en binario: ";
     cin >> b;
 
-    cout << "El resultado de " << b << "a base decimal es: " << binToDec(b) << endl;
+    cout << binToDec(b) << endl;
 }
 
 void ui_index() {
@@ -131,7 +131,7 @@ void ui_index() {
     write_title("CALCULADORA", true);
     cout
             << "Seleccione una opción a continuación.\n1) Suma\n2) Resta\n3) Multiplicación\n4) División\n5) Factorial"
-                    "\n6) Potencia \n7)Decimal a binario\n8)Binario a decimal\n9)Complemento a uno\n10)Complemento a dos"
+                    "\n6) Potencia \n7) Decimal a binario\n8) Binario a decimal\n9) Complemento a uno\n10) Complemento a dos"
             << "\ns) Salir"
             << endl << endl << "> ";
     cin >> opt;
@@ -151,7 +151,7 @@ void ui_index() {
     else if (opt == "7")
         return;
     else if (opt == "8")
-        return;
+        ui_module_binToDec();
     else if (opt == "9")
         return;
     else if (opt == "10")
