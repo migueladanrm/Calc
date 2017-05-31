@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 
 /**
@@ -18,3 +19,8 @@ void write_title(std::string title);
  * @param clean Especifica si se limpiará la consola.
  */
 void write_title(std::string title, bool clean);
+
+template<typename Out>
+void split(const std::string &s, char delim, Out result);
+
+std::vector<std::string> split(const std::string &s, char delim);

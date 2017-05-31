@@ -11,6 +11,7 @@
  */
 
 #include <iostream>
+#include <vector>
 #include "utils.h"
 #include "operations.h"
 
@@ -38,6 +39,9 @@ void ui_module_sum() {
     float total = add(nums);
 
     cout << "La suma de los valores es: " << total << endl;
+
+    cout << endl << "¿Desea realizar otra suma? (s/n) > ";
+
 }
 
 void ui_module_subtract() {
