@@ -123,7 +123,7 @@ void ui_module_binToDec() {
     cout << "Introdúzca el número en binario: ";
     cin >> b;
 
-    cout << binToDec(b) << endl;
+    binToDec(b,0);
 }
 
 

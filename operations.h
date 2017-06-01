@@ -48,9 +48,10 @@ int pow(int n, int p);
 
 /**
  * @param n Número binario a convetir.
+ * @param ieee Número 1/0  1 para usar el método en ieee 0 para utilizar normal.
  * @return Número decimal.
  */
-std::string binToDec(std::string n);
+float binToDec(std::string n,int ieee);
 
 /**
  * Conversión de grados Celsius a grades Fahrenheit.
