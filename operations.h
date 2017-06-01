@@ -58,3 +58,11 @@ std::string binToDec(std::string n);
  * @return Grados Fahrenheit.
  */
 float celsius_to_fahrenheit(float celsius);
+
+
+/**
+ *
+ * @param a
+ * @return
+ */
+std::string decimal_binario(std::string a);

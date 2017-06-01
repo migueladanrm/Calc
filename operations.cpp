@@ -1,9 +1,5 @@
 #include "operations.h"
-#include "utils.h"
 #include <iostream>
-#include <cmath>
-#include <string.h>
-#include <cstring>
 
 using namespace std;
 
@@ -90,92 +86,9 @@ int pow(int n, int p) {
     return pow;
 }
 
-string binToDec(string n) {
-    bool flagError = false;
-    int contDots = 0;
-    for (int i = 0; i < (int) n.size(); i++) {
-        if (n[i] == '.') {
-            contDots += 1;
-            if (contDots > 1)
-                flagError = true;
-        }
-        else if (n[i] != '0' && n[i] != '1' && n[i] != '.') {
-            flagError = true;
-        }
-    }
-
-    if (!flagError && contDots == 1) {
-
-        vector<string> vector1;
-        vector1 = split(n, '.');
-        string e = vector1[0];
-        string d = vector1[1];
-
-        vector<int> entero;
-        vector<int> decimal;
+float binToDec(float n){
 
 
-        //Llena vector entero
-        int tam1 = (int) e.size();
-        for (int i = 0; i < tam1; i++) {
-            int temp = e[i];
-            entero.push_back(temp - 48);
-        }
-
-        //Llena vector decimal
-        int tam2 = (int) d.size();
-        for (int i = 0; i < tam2; i++) {
-            int temp = d[i];
-            decimal.push_back(temp - 48);
-        }
-
-        //Convierte el contenido vector entero a base decimal
-        int resultEntero = 0;
-        int potencia = 0;
-        for (int i = tam1 - 1; i > -1; i--) {
-            resultEntero += multiply(entero[i], pow(2, potencia));
-            potencia += 1;
-        }
-        //cout<<resultEntero;
-
-        //Convierte el contenido vector decimal a base decimal
-        float resultDecimal = 0;
-        int potencia2 = 1;
-        for (int i = 0; i < tam2; i++) {
-            float p = divide(1, std::pow(2, potencia2));
-            int d = decimal[i];
-            float temp = (d * p);
-            resultDecimal += temp;
-            potencia2 += 1;
-        }
-
-
-        string string2 = to_string(resultDecimal);
-        vector<string> vector2 = split(string2, '.');
-        string string3 = to_string(resultEntero);
-        string string1 = string3 + "." + vector2[1];
-
-        return "El resultado de "+n+" a base decimal es: "+string1;
-    } else if (!flagError && contDots == 0) {
-        vector<int> entero;
-        int tam = (int) n.size();
-        for (int i = 0; i < tam; i++) {
-            int temp = n[i];
-            entero.push_back(temp - 48);
-        }
-
-        //Convierte el contenido vector entero a base decimal
-        int resultEntero = 0;
-        int potencia = 0;
-        for (int i = tam - 1; i > -1; i--) {
-            resultEntero += multiply(entero[i],pow(2, potencia));
-            potencia += 1;
-        }
-
-        return "El resultado de "+n+" a base decimal es: "+to_string(resultEntero);
-    } else if (flagError) {
-        return "Error, reintentar";
-    }
 }
 
 float celsius_to_fahrenheit(float celsius) {
